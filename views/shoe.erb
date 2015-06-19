@@ -31,8 +31,9 @@
 <%else%>
     <p> no stores added </p>
 <% end %>
-
 </form>
+<br>
+<a href='/stores/'><bsl>Back to Store List</bsl></a>
 
 <form action='/shoe/<%=@shoe.id%>' method='post'>
   <input name='_method' type='hidden' value='delete'>
