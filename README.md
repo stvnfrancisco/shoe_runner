@@ -6,7 +6,7 @@ This app will allow the user to add shoes and shoe stores to a database.
 
 To run this app in localhost:4567:
 <br>
-                                   1.) guest$ Bundle
+                                   1.) guest$ bundle
                                    <br>
                                    2.) Open postgres in the terminal and run psql in another tab.
                                    <br>
