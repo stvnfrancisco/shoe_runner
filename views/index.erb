@@ -1,4 +1,17 @@
 <h1><bold><h>Shoe Runner</h></bold></h1>
+
+<h2>Shoes and the stores they're sold at.</h2>
+
+<% if @shoes.any?() %>
+<% @shoes.each() do |shoe| %>
+  <ul>
+      <li><a href='/shoe/<%=shoe.id()%>'> <sl><%=shoe.title()%></sl></a></li>
+  </ul>
+    <%end%>
+<%else %>
+  <strong><p> Add shoes </p></strong>
+<%end%>
+
 <form action='/' method='post'>
   <label for='new_shoe'> <strong>Add Shoe</strong> </label>
   <input id='new_shoe' name='new_shoe' type='text' </input>
@@ -13,15 +26,3 @@
 <br>
 <a href='/stores/'> <stl>Store List</stl> </a>
 <br>
-
-<h2>Shoes and the stores they're sold at.</h2>
-
-<% if @shoes.any?() %>
-<% @shoes.each() do |shoe| %>
-  <ul>
-      <li><a href='/shoe/<%=shoe.id()%>'> <sl><%=shoe.title()%></sl></a></li>
-  </ul>
-    <%end%>
-<%else %>
-  <strong><p> Add shoes </p></strong>
-<%end%>
