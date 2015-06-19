@@ -6,6 +6,7 @@ body {
 
 h1 {
   color: white;
+  text-align: center;
 }
 
 h2 {
@@ -30,4 +31,9 @@ label {
 
 p {
   color: white;
+}
+
+h {
+  text-align: center;
+  font-size: 150px;
 }
