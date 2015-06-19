@@ -1,6 +1,18 @@
-<br><a href='/'> Home Page </a></br>
+<a href='/'> Home Page </a>
+<br>
 <h1> <%=@store.title %> </h1>
-<p>Add stores</p>
+
+<% if @shoes.any?() %>
+<h3> <%=@store.title()%> has these shoes:</h3>
+<% @shoes.each() do |shoe| %>
+  <ul>
+      <li><%=shoe.title()%></li>
+  </ul>
+    <%end%>
+<%else%>
+  <p> no shoes</p>
+<%end%>
+
 <h3> Add a shoe to this store </h3>
 
 <form action='/store/<%=@store.id()%>' method='post'>
@@ -25,5 +37,4 @@
 <form action='/store/<%=@store.id%>' method='post'>
   <input name='_method' type='hidden' value='delete'>
   <button type='submit' class="btn btn-danger">Delete Store</button>
-</br>
 </form>

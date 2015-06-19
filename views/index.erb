@@ -1,15 +1,17 @@
-<h1>Shoe Runner</h1>
+<h1><bold>Shoe Runner</bold></h1>
 <form action='/' method='post'>
-  <label for='new_shoe'> <strong>Enter a shoe</strong> </label>
+  <label for='new_shoe'> <strong>Add a shoe</strong> </label>
   <input id='new_shoe' name='new_shoe' type='text' </input>
   <button type='submit' class='btn btn-success'>Save Shoe</button>
-</form><br>
-</br>
+</form>
+<br>
 <form action='/store/save/' method='post'>
   <label for='new_store'> <strong>Add Store</strong> </label>
   <input id='new_store' name='new_store' type='text' </input>
   <button type='submit' class='btn btn-success'> Save Store</button>
 </form>
+<br>
+
 <h2>Shoes and the stores they're sold at.</h2>
 
 <% if @shoes.any?() %>

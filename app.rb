@@ -61,7 +61,7 @@ patch('/store/:id') do
     @store.shoes.push(@new_shoe)
     end
   end
-  
+
   redirect("/store/#{params.fetch('id')}")
 end
 
