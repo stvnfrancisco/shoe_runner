@@ -1,0 +1,20 @@
+<a href='/'> Home </a>
+ <h1>Stores</h1>
+<p>Add a store</p>
+
+<% if @stores.any?() %>
+<% @stores.each() do |store| %>
+  <ul>
+      <li><a href='/store/<%=store.id()%>'> <%=store.title()%></a></li>
+  </ul>
+    <%end%>
+<%else %>
+  <p> no stores </p>
+<%end%>
+
+
+<form action='/store/save/' method='post'>
+  <label for='new_store'> Enter Store Name: </label>
+  <input id='new_store' name='new_store' type='text' </input>
+  <button type='submit' class='btn btn-success'> Save Store</button>
+</form>

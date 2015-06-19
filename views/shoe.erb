@@ -1,0 +1,40 @@
+<br><a href='/'> Home Page </a></br>
+<h1> <%=@shoe.title()%> </h1>
+
+<% if @stores.any?() %>
+<h3> <%=@shoe.title()%> is sold at the following store:</h3>
+<% @stores.each() do |store| %>
+  <ul>
+      <li><%=store.title()%></li>
+  </ul>
+    <%end%>
+<%else%>
+  <p> no stores </p>
+<%end%>
+
+<h3> Add a store for this shoe </h3>
+
+<form action='/shoe/<%=@shoe.id()%>' method='post'>
+<input type="hidden" name="_method" value="patch">
+
+<% if @all_stores.any?() %>
+
+    <% @all_stores.each() do |store| %>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="store_ids[]" value="<%= store.id() %>"><%= store.title() %></input>
+        </label>
+      </div>
+      <% end %>
+      <button type="submit" class = "btn btn-success"><strong>Add Stores</strong></button>
+<%else%>
+    <p> no stores added </p>
+<% end %>
+
+</form>
+
+<form action='/shoe/<%=@shoe.id%>' method='post'>
+  <input name='_method' type='hidden' value='delete'>
+<br><button type='submit' class="btn btn-danger">Delete Shoe</button>
+</br>
+</form>
