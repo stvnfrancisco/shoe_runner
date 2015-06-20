@@ -1,12 +1,12 @@
 <a href='/'> Home Page </a>
 <br>
-<h1> <%=@store.title %> </h1>
+<h1> <x><%=@store.title %></x> </h1>
 
 <% if @shoes.any?() %>
 <h3> <%=@store.title()%> has these shoes:</h3>
 <% @shoes.each() do |shoe| %>
   <ul>
-      <li><%=shoe.title()%></li>
+      <li><sl><%=shoe.title()%></sl></li>
   </ul>
     <%end%>
 <%else%>
@@ -38,3 +38,4 @@
   <input name='_method' type='hidden' value='delete'>
   <button type='submit' class="btn btn-danger">Delete Store</button>
 </form>
+<a href='/stores/'> <stl>Back to Store List</stl> </a>

@@ -1,6 +1,6 @@
 <a href='/'> Home Page </a>
 <br>
-<h1> <%=@shoe.title()%> </h1>
+<h1> <x><%=@shoe.title()%></x> </h1>
 
 <% if @stores.any?() %>
 <h3> <%=@shoe.title()%> is sold at the following store:</h3>
@@ -37,6 +37,6 @@
 
 <form action='/shoe/<%=@shoe.id%>' method='post'>
   <input name='_method' type='hidden' value='delete'>
-<br><button type='submit' class="btn btn-danger">Delete Shoe and it's info</button>
+<br><button type='submit' class="btn btn-danger">Delete Shoe and its info</button>
 </br>
 </form>
