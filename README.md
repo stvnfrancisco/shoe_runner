@@ -10,7 +10,7 @@ To run this app in localhost:4567:
                                    <br>
                                    2.) Open postgres in the terminal and run psql in another tab.
                                    <br>
-                                   3.) guest$ rake:dbcreate
+                                   3.) guest$ rake db:create
                                    <br>
                                    4.) guest$ rake db:migrate
                                    <br>
