@@ -4,8 +4,10 @@ by: Steven Francisco
 
 This app will allow the user to add shoes and shoe stores to a database.
 
-To run this app in localhost:4567:
+To run this app in your browser:
 <br>
+                                  bash/terminal:
+                                  <br>
                                    1.) guest$ bundle
                                    <br>
                                    2.) Open postgres in the terminal and run psql in another tab.
@@ -15,6 +17,10 @@ To run this app in localhost:4567:
                                    4.) guest$ rake db:migrate
                                    <br>
                                    5.) guest$ rake db:test:prepare
+                                   <br>
+                                   6.) guest$ ruby app.rb
+                                   <br>
+                                   In  browser run localhost:4567
 
 Built using Ruby ver.: ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
 
